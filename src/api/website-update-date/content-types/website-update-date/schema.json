@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "website_update_dates",
+  "info": {
+    "singularName": "website-update-date",
+    "pluralName": "website-update-dates",
+    "displayName": "WebsiteUpdateDate"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "lastUpdated": {
+      "type": "datetime"
+    }
+  }
+}

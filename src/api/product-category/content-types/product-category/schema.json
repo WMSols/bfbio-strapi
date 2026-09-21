@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_categories",
+  "info": {
+    "singularName": "product-category",
+    "pluralName": "product-categories",
+    "displayName": "Product Categories"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "description": {
+      "type": "text"
+    },
+    "therapeutic_area": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::pharmaceutical-area.pharmaceutical-area",
+      "inversedBy": "product_categories"
+    }
+  }
+}

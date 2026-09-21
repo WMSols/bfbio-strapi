@@ -1,0 +1,128 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Products"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "formulation": {
+      "type": "string"
+    },
+    "presentation": {
+      "type": "string"
+    },
+    "strength": {
+      "type": "string"
+    },
+    "commonlyPrescribed": {
+      "type": "boolean"
+    },
+    "prescriptionRequired": {
+      "type": "boolean"
+    },
+    "availableOnline": {
+      "type": "boolean"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "product_category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product-category.product-category"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "dvagoUrl": {
+      "type": "text",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "availableOnline"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "faqFile": {
+      "type": "media",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "isFaqAvailable"
+            },
+            true
+          ]
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "instructionsFile": {
+      "type": "media",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "isInstructionAvailable"
+            },
+            true
+          ]
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "leafletFile": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "isFaqAvailable": {
+      "type": "boolean"
+    },
+    "isInstructionAvailable": {
+      "type": "boolean"
+    }
+  }
+}

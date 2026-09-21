@@ -1,0 +1,104 @@
+{
+  "kind": "collectionType",
+  "collectionName": "safety_reports",
+  "info": {
+    "singularName": "safety-report",
+    "pluralName": "safety-reports",
+    "displayName": "Safety Reports"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "patientInitials": {
+      "type": "string"
+    },
+    "patientGender": {
+      "type": "enumeration",
+      "enum": [
+        "Male",
+        "Female"
+      ]
+    },
+    "patientAge": {
+      "type": "string"
+    },
+    "drugName": {
+      "type": "string"
+    },
+    "drugIndication": {
+      "type": "string"
+    },
+    "dosageForm": {
+      "type": "string"
+    },
+    "drugStartDate": {
+      "type": "date"
+    },
+    "drugEndDate": {
+      "type": "date"
+    },
+    "isDrugOngoing": {
+      "type": "boolean"
+    },
+    "seriousnessDate": {
+      "type": "date"
+    },
+    "causeOfEvent": {
+      "type": "string"
+    },
+    "seriousnessCriteria": {
+      "type": "enumeration",
+      "enum": [
+        "Life threatening",
+        "Initial / prolonged hospitalization",
+        "Congenital anomaly / birth defects",
+        "Persistent / significant disability",
+        "Medically significant",
+        "Non Serious"
+      ]
+    },
+    "outcome": {
+      "type": "enumeration",
+      "enum": [
+        "Not resolved",
+        "Resolved",
+        "Resolved with sequelae",
+        "Resolving",
+        "Unknown",
+        "Death"
+      ]
+    },
+    "eventStartDate": {
+      "type": "date"
+    },
+    "eventEndDate": {
+      "type": "date"
+    },
+    "adverseEventDetails": {
+      "type": "text"
+    },
+    "managementOfEvents": {
+      "type": "text"
+    },
+    "pregnancyExposureStartDate": {
+      "type": "date"
+    },
+    "pregnancyExposureEndDate": {
+      "type": "date"
+    },
+    "reporterName": {
+      "type": "string"
+    },
+    "reporterProfession": {
+      "type": "string"
+    },
+    "reporterTelephone": {
+      "type": "string"
+    },
+    "reporterEmail": {
+      "type": "email"
+    }
+  }
+}

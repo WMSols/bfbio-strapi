@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "job_posts",
+  "info": {
+    "singularName": "job-post",
+    "pluralName": "job-posts",
+    "displayName": "Job Posts"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "domain": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Full-Time",
+        "Part-Time",
+        "Internship"
+      ]
+    },
+    "location": {
+      "type": "string"
+    },
+    "overview": {
+      "type": "text"
+    },
+    "requirements": {
+      "type": "text"
+    },
+    "responsiblities": {
+      "type": "text"
+    },
+    "skills": {
+      "type": "text"
+    },
+    "benefits": {
+      "type": "text"
+    }
+  }
+}

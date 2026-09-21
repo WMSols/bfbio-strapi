@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "report_types",
+  "info": {
+    "singularName": "report-type",
+    "pluralName": "report-types",
+    "displayName": "Report Types"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
