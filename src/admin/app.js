@@ -29,7 +29,7 @@ const config = {
   ],
   translations: {
     en: {
-      'Auth.form.welcome.title': 'Ferozsons Laboratories Limited',
+      'Auth.form.welcome.title': 'Bf Biosciences',
       'Auth.form.welcome.subtitle': 'Login to your admin panel',
     },
   },
